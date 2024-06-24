@@ -1,17 +1,37 @@
-// Update this page (the content is just a fallback if you fail and example)
-// Use chakra-ui
-import { Container, Text, VStack } from "@chakra-ui/react";
-
-// Example of using react-icons
-// import { FaRocket } from "react-icons/fa";
-// <IconButton aria-label="Add" icon={<FaRocket />} size="lg" />; // IconButton would also have to be imported from chakra
+import { Container, Text, VStack, Heading, Button, Box, Image, Flex } from "@chakra-ui/react";
+import { FaCar, FaBus, FaBicycle, FaWalking } from "react-icons/fa";
 
 const Index = () => {
   return (
-    <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-      <VStack spacing={4}>
-        <Text fontSize="2xl">Your Blank Canvas</Text>
-        <Text>Chat with the agent to start making edits.</Text>
+    <Container centerContent maxW="container.xl" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center" p={4}>
+      <VStack spacing={8} textAlign="center">
+        <Heading as="h1" size="2xl" color="brand.700">
+          Mobility as a Service
+        </Heading>
+        <Text fontSize="xl" color="gray.600">
+          Seamless urban mobility solutions for everyone.
+        </Text>
+        <Flex justifyContent="center" wrap="wrap" spacing={4}>
+          <Box p={4} textAlign="center">
+            <FaCar size="3em" color="brand.700" />
+            <Text mt={2}>Car</Text>
+          </Box>
+          <Box p={4} textAlign="center">
+            <FaBus size="3em" color="brand.700" />
+            <Text mt={2}>Bus</Text>
+          </Box>
+          <Box p={4} textAlign="center">
+            <FaBicycle size="3em" color="brand.700" />
+            <Text mt={2}>Bicycle</Text>
+          </Box>
+          <Box p={4} textAlign="center">
+            <FaWalking size="3em" color="brand.700" />
+            <Text mt={2}>Walking</Text>
+          </Box>
+        </Flex>
+        <Button colorScheme="teal" size="lg">
+          Get Started
+        </Button>
       </VStack>
     </Container>
   );
